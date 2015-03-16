@@ -8,8 +8,14 @@
 - 七牛存储图片文件
 - 本地存储图片文件
 
-## 配置
+## 用法
+`python ./crawler.py`
 
+or
+
+`python ./crawler.py <id> <number_of_pages>`
+
+## 配置
 需要在config.py中配置
 
 ```
