@@ -75,7 +75,7 @@ def download_image_file(itemdata):
     while op > 0:
         try:
             r = requests.get(itemdata.urlPic, stream=True)
-            with open(itemdata.pathDir() + os.sep + itemdata.local_filename, 'wb') as f:
+            with open(itemdata.pathDir + os.sep + itemdata.local_filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=1024):
                     if chunk:
                         f.write(chunk)

@@ -13,7 +13,7 @@ def up(i):
 
     q = Auth(access_key, secret_key)
 
-    localfile = i.pathDir() + os.sep + i.local_filename
+    localfile = i.pathDir + os.sep + i.local_filename
     key = i.local_filename
     mime_type = "image/jpeg"
     params = {'x:a': 'a'}

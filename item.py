@@ -16,18 +16,20 @@ class itemData(object):
         self.local_filename = local_filename
         self.group = group
 
+    @property
     def pathDir(self):
         nameZu = self.urlDiscussion.split('/')[4]
         timeUp = self.timeUp.split()[0]
         path = os.getcwd() + os.sep + nameZu + os.sep
         return path
 
+    @property
     def pathFile(self):
-        path = self.pathDir() + os.sep + self.local_filename
+        path = self.pathDir + os.sep + self.local_filename
         return path
 
     def checkDir(self):
-        path = self.pathDir()
+        path = self.pathDir
         if not os.path.exists(path):
             os.makedirs(path)
 
